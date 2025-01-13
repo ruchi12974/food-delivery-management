@@ -37,7 +37,7 @@ const PatientTable = () => {
     emergencyContact: '',
   });
 
-  const API_URL = 'http://localhost:5001/api/patients';
+  const API_URL = 'https://hospital-food-management-backend.onrender.com/api/patients';
 
   // Fetch Patients
   useEffect(() => {

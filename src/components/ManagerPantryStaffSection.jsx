@@ -32,7 +32,7 @@ const ManagerPantryStaffSection = () => {
 
   const fetchPantryStaff = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/pantry-staff");
+      const response = await axios.get("https://hospital-food-management-backend.onrender.com/api/pantry-staff");
       setPantryStaff(response.data);
     } catch (error) {
       console.error("Error fetching pantry staff:", error);
@@ -61,12 +61,12 @@ const ManagerPantryStaffSection = () => {
       if (editingStaff) {
         // Update staff
         await axios.put(
-          `http://localhost:5001/api/pantry-staff/${editingStaff._id}`,
+          `https://hospital-food-management-backend.onrender.com/api/pantry-staff/${editingStaff._id}`,
           formValues
         );
       } else {
         // Add new staff
-        await axios.post("http://localhost:5001/api/pantry-staff", formValues);
+        await axios.post("https://hospital-food-management-backend.onrender.com/api/pantry-staff", formValues);
       }
       fetchPantryStaff();
       handleDialogClose();
@@ -77,7 +77,7 @@ const ManagerPantryStaffSection = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/pantry-staff/${id}`);
+      await axios.delete(`https://hospital-food-management-backend.onrender.com/api/pantry-staff/${id}`);
       fetchPantryStaff();
     } catch (error) {
       console.error("Error deleting pantry staff:", error);

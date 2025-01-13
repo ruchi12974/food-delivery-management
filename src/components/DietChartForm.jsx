@@ -32,7 +32,7 @@ const DietChartForm = () => {
   const [open, setOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
 
-  const API_URL = "http://localhost:5001/api/diet-charts";
+  const API_URL = "https://hospital-food-management-backend.onrender.com/api/diet-charts";
 
   // Fetch all diet charts
   const fetchDietCharts = async () => {

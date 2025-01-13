@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5001/api'; // Adjust according to your backend
+const API_URL = 'https://hospital-food-management-backend.onrender.com/api'; // Adjust according to your backend
 
 // Existing functions (for reference)
 

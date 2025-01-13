@@ -23,7 +23,7 @@ const MealTrackingSection = () => {
   // Fetch meal preparation tasks
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/tasks");
+      const response = await axios.get("https://hospital-food-management-backend.onrender.com/api/tasks");
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching meal preparation tasks:", error);
@@ -33,7 +33,7 @@ const MealTrackingSection = () => {
   // Fetch delivery statuses
   const fetchDeliveries = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/deliveries");
+      const response = await axios.get("https://hospital-food-management-backend.onrender.com/api/deliveries");
       setDeliveries(response.data);
     } catch (error) {
       console.error("Error fetching delivery statuses:", error);

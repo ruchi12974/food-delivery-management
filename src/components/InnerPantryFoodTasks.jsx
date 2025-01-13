@@ -14,7 +14,7 @@ const InnerPantryFoodTasks = () => {
   // Fetch assigned meal preparation tasks from the API
   useEffect(() => {
     axios
-      .get('http://localhost:5001/api/tasks')
+      .get('https://hospital-food-management-backend.onrender.com/api/tasks')
       .then((response) => {
         setTasks(response.data); // Assuming the response data contains an array of tasks
       })
@@ -32,7 +32,7 @@ const InnerPantryFoodTasks = () => {
   const handleUpdateStatus = (taskId) => {
     if (selectedStatus) {
       axios
-        .put(`http://localhost:5001/api/tasks/${taskId}`, { status: selectedStatus })
+        .put(`https://hospital-food-management-backend.onrender.com/api/tasks/${taskId}`, { status: selectedStatus })
         .then((response) => {
           setTasks((prevTasks) =>
             prevTasks.map((task) =>

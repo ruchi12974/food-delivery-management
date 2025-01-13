@@ -20,8 +20,7 @@ const ManageDeliveryPersonnel = () => {
 
   // Fetch delivery personnel details
   useEffect(() => {
-    axios
-      .get('http://localhost:5001/api/deliveries')
+     axios.get('https://hospital-food-management-backend.onrender.com/api/deliveries')
       .then((response) => {
         setDeliveryPersonnel(response.data); // Assuming the response contains a list of delivery personnel
       })
@@ -51,7 +50,7 @@ const ManageDeliveryPersonnel = () => {
   // Handle adding a new delivery personnel
   const handleAddPersonnel = () => {
     axios
-      .post('http://localhost:5001/api/deliveries', newPerson)
+      .post('https://hospital-food-management-backend.onrender.com/api/deliveries', newPerson)
       .then((response) => {
         setDeliveryPersonnel([...deliveryPersonnel, response.data]);
         setNewPerson({ name: '', contact: '', mealBoxAssigned: '', otherDetails: '' }); // Reset fields
@@ -65,7 +64,7 @@ const ManageDeliveryPersonnel = () => {
   const handleUpdatePersonnel = () => {
     if (selectedPersonId && updatedPerson.name) {
       axios
-        .put(`http://localhost:5001/api/deliveries/${selectedPersonId}`, updatedPerson)
+        .put(`https://hospital-food-management-backend.onrender.com/api/deliveries/${selectedPersonId}`, updatedPerson)
         .then((response) => {
           setDeliveryPersonnel(
             deliveryPersonnel.map((person) =>
