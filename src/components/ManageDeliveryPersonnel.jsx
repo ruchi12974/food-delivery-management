@@ -211,7 +211,7 @@ const ManageDeliveryPersonnel = () => {
               <ListItem key={person._id}>
                 <ListItemText
                   primary={person.name}
-                  secondary={`Contact: ${person.contact}, Meal Box: ${person.mealBoxAssigned}, Other Details: ${person.otherDetails}`}
+                  secondary={`Assigned To: ${person.assignedTo}, Meal Box: ${person.mealBoxId}}`}
                 />
               </ListItem>
             ))}
